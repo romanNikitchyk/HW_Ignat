@@ -1,0 +1,32 @@
+.active{
+    color:palevioletred;
+    text-decoration: none;
+}
+
+.unactive{
+    color: dodgerblue;
+    text-decoration: none;
+}
+.active:hover{
+    color:red;
+}
+.unactive:hover{
+    color:red;
+}
+.slider{
+    display: inline;
+}
+
+.header{
+    display: inline;
+    position: relative;
+    left: -175px;
+    transition: left .2s linear;
+}
+.header:hover{
+    left:0px;
+}
+img{
+    width: 100px;
+    height: 21.33px;
+}
