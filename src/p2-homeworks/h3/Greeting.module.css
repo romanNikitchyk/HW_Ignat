@@ -1,0 +1,14 @@
+.someClass {
+border: 1px solid green;
+}
+
+.error {
+    border: 1px solid red;
+}
+
+.errorText1{
+    color: red;
+}
+.errorText2{
+    color:green;
+}
