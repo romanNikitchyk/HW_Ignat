@@ -3,6 +3,7 @@ import {NavLink} from "react-router-dom";
 import {PATH} from "./Pages";
 import s from "./header.module.css"
 import pic from "./pages/Heand.jpg"
+
 function Header() {
     return (
         <div className={s.header}>

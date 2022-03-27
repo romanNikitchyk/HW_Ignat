@@ -21,7 +21,7 @@
     display: inline;
     position: relative;
     left: -175px;
-    transition: left .2s linear;
+    transition: left .50s linear;
 }
 .header:hover{
     left:0px;
