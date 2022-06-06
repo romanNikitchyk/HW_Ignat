@@ -16,14 +16,28 @@ beforeEach(() => {
 
 test('sort name up', () => {
     const newState = homeWorkReducer(initialState, {type: 'sort', payload: 'up'})
-
+    const sortingNames = (a: any, b: any) => {
+        if (a.name > b.name) {
+            return 1
+        } else {
+            return -1
+        }
+    }
+    let sortedNames = initialState.sort(sortingNames)
     console.log(newState)
-    // expect(...).toBe(...)
+     expect(initialState).toBe(sortedNames)
 })
 test('sort name down', () => {
     const newState = homeWorkReducer(initialState, {type: 'sort', payload: 'down'})
-
-
+    const sortingNamesDown = (a: any, b: any) => {
+        if (a.name > b.name) {
+            return -1
+        } else {
+            return 1
+        }
+    }
+    let sortedNamesDown = initialState.sort(sortingNamesDown)
+    expect(initialState).toBe(sortedNamesDown)
 })
 test('check age 18', () => {
     const newState = homeWorkReducer(initialState, {type: 'check', payload: 18})
