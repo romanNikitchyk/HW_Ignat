@@ -1,29 +1,28 @@
-import React from 'react';
-import MessageModule from "./Message.module.css"
+import React from "react";
+import styles from "./Message.module.css";
 
-type MessageDataPropsType = {
-    avatar: string,
-    name: string,
-    message: string,
-    time: string
+type MessageProps = {
+  avatar: string
+  name: string
+  message: string
+  time: string
 }
 
-
-function Message(props: MessageDataPropsType,) {
-    return (
-        <div className={MessageModule.message}>
-
-            <img className={MessageModule.avatar} src={props.avatar} alt={"avatar"}/>
-
-            <div className={MessageModule.angle}/>
-
-            <div className={MessageModule.content}>
-                <div className={MessageModule.name}>{props.name}</div>
-                <div className={MessageModule.text}>{props.message},</div>
-                <div className={MessageModule.time}> {props.time},</div>
-            </div>
+const Message: React.FC<MessageProps> = (props) => {
+  return (
+    <div className={styles.message}>
+      <img className={styles.avatarImg} src={props.avatar}/>
+      <div className={styles.wrapper}>
+        <div className={styles.messageBlock}>
+          <span className={styles.name}>{props.name}</span>
+          <span className={styles.text}>{props.message}</span>
+          <span className={styles.time}>{props.time}</span>
         </div>
-    )
+      </div>
+
+
+    </div>
+  );
 }
 
-export default Message
+export default Message;
