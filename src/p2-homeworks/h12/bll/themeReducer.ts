@@ -4,7 +4,7 @@ themeColor:"some"
 export type InitialStateType = {
     themeColor:string
 }
-export const themeReducer = (state = initState, action: any): InitialStateType => { // fix any
+export const themeReducer = (state = initState, action: ChangeThemeAC): InitialStateType => { // fix any
     switch (action.type) {
         case "CHANGE-COLOR": {
             return {...state, themeColor:action.color};

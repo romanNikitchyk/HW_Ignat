@@ -8,7 +8,7 @@ type ActionsType = LoadingACType
 
 export const loadingReducer = (state: InitStateType = initState, action: ActionsType): InitStateType => { // fix any
     switch (action.type) {
-        case 'BLA-BLA': {
+        case 'clack-clack': {
             return {loading: !state.loading}
         }
         default:
@@ -16,6 +16,6 @@ export const loadingReducer = (state: InitStateType = initState, action: Actions
     }
 }
 type LoadingACType = {
-    type: "BLA-BLA"
+    type: "clack-clack"
 }
-export const loadingAC = (): LoadingACType => ({type: "BLA-BLA"}) // fix any
+export const loadingAC = (): LoadingACType => ({type: "clack-clack"}) // fix any

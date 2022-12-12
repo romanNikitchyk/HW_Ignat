@@ -1,9 +1,10 @@
 import React, {ChangeEvent, InputHTMLAttributes, DetailedHTMLProps} from 'react'
+import {ArrType} from "../../HW7";
 
 type DefaultRadioPropsType = DetailedHTMLProps<InputHTMLAttributes<HTMLInputElement>, HTMLInputElement>
 
 type SuperRadioPropsType = DefaultRadioPropsType & {
-    options?: any[]
+    options?: ArrType
     onChangeOption?: (option: any) => void
 }
 
@@ -25,6 +26,7 @@ const SuperRadio: React.FC<SuperRadioPropsType> = (
     const mappedOptions: any[] = options ? options.map((o, i) => ( // map options with key
         <label key={name + '-' + i}>
             <input
+              key={i}
                 type={'radio'}
                 name={"radio"}
                 value={o}

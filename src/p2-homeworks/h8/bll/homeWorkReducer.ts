@@ -46,8 +46,7 @@ export const homeWorkReducer = (state: Array<initialPeopleType> = initialPeople,
 
         case 'check': {
             const newState = [...state]
-            let filtered = newState.filter((p: initialPeopleType) => p.age > action.payload)
-            return filtered
+            return newState.filter((p: initialPeopleType) => p.age > action.payload)
         }
         default:
             return state
