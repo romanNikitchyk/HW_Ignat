@@ -15,10 +15,7 @@ function Affairs(props: AffairsPropsType) {
             affair={a}
             deleteAffairCallback={props.deleteAffairCallback}
         />
-
-
     ))
-
 
     const setFilter = (filter:FilterType) => {
         props.setFilter(filter)
@@ -26,9 +23,7 @@ function Affairs(props: AffairsPropsType) {
 
     return (
         <div>
-
             {mappedAffairs}
-
             <button onClick={()=>setFilter("all")}>All</button>
             <button onClick={()=>setFilter("high")}>High</button>
             <button onClick={()=>setFilter("middle")}>Middle</button>
